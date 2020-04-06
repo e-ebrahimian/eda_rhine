@@ -1,0 +1,118 @@
+
+          ## Answers to Explorer's Questions ##
+
+
+
+
+## Question 1 ##
+
+rc = 185000  ### Rhine Catchment Area is 185000 Km2 based on web search ####
+
+rc
+
+
+
+## Question 2 ##
+
+rl = 1233000  ### Rhine Length (m) ###
+
+rwa = 185000 *1000000 /1233000  ####Rhine average width ####
+
+rwa
+
+
+perc =  0.05 * 24  #### percipitation in 24 hours (m3) ###
+
+perc
+
+rf = (0.05 / 3600) * rwa   #### increase in runoff (m3/sec) ####
+
+rf      ## which is about  2.083897  m3/sec  ##
+
+
+## Question 3 ##
+
+## average Rhine discharge  (ard)= 2900  m3/s  ##
+##  the time that a droplet takes to sail all river length  (ti)=  catchment River Volume / average discharge ##
+ti = (rc * rl) / ard  
+ti    ## it is 78656897 s , which is almost  910 days
+
+
+
+## Question 4  a ##
+
+
+ Lower summer discharge due to the reduced winter snow storage 
+
+ and Increase in evapotranspiration
+
+
+
+
+## Question 4  b  ##
+#
+# Differences CAN be due to these factors:
+
+   1) different physical characteristics of the studied areas
+
+   2) different spatial and temporal scales used in the modelling
+
+   3) different representations of several hydrological processes(like evapotranspiration,snow melt)
+
+
+
+
+
+## Question 4 c  ##
+
+ The reason here is somehow similar to the reason of the Columbus example
+
+ which is mainly an econimic reason.
+
+ In brief, they mentioned Socio-economic sectors, tourism, flood risks (which
+
+ directly affects on agriculture and industry and ...). Therefore, to have strategic plans
+
+ in management, and to face the impacts of climate changes in wise way (that they call 
+
+ no-regret and flexible), it is good to have these kind of research data
+
+
+
+
+## Question 4 d  ##
+
+
+ Yes. for example (in Rhine Region):
+
+ Climatic change and the effect on hydrology and water management in the Rhine basin
+  P. Krahe ; H. Buiteveld ; L. Pfister ; Ch. Ritz ; E. Sprokkereef  (2005)
+  https://iwaponline.com/wst/article-abstract/51/5/23/11411
+
+
+  Impact of climate change on hydrological regimes and water resources management in the Rhine Basin     
+ Grabs, W. ; Daamen, K. ; Gellens, D. (1997)  
+  https://library.wur.nl/WebQuery/hydrotheek/953084
+
+
+ Impact of Climate Change on the Regional Hydrology – Scenario-Based Modelling Studies in the German Rhine Catchment
+ Lucas Menzel, Annegret H. Thieken, Daniel Schwandt & Gerd Bürger   (2006)
+ https://link.springer.com/article/10.1007/s11069-005-8599-z
+
+(and examples in other regions):
+
+Modelling the impacts of environmental changes on hydrological regimes in the Hei River Watershed, China
+https://www.sciencedirect.com/science/article/pii/S0921818107001348
+Hongming He,  Jie Zhou,  Wanchang Zhang  (2008)
+
+
+Impacts and Uncertainty of Climate Change on Water Resource Management of the Peribonka River System (Canada)
+Marie Minville, François Brissette, and Robert Leconte.
+https://ascelibrary.org/doi/abs/10.1061/(ASCE)WR.1943-5452.0000041
+
+
+##  Question 4 e  ##
+Yes. According to the following source (which is Netherlands Ministry of Infrastructure and Environment) in the autumn of 2018, the Rhine discharge (near the village Lobith) was the 4th lowest on record.
+It can be seen from the diagram at the bottom of the following webpage,  that in December 2011 there is a sharpe rise in discharge which is somehow unique during last 70 years (after 1947).
+https://climate.copernicus.eu/river-discharge
+https://climate.copernicus.eu/river-discharge
