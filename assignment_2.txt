@@ -1,0 +1,120 @@
+Navigator's Question are sent in R format (both in your Slack and in my GitHub
+
+
+Explorer's Questions:
+
+Q1
+Unit of Area :  km2
+Unit of Runoff :  m3/s
+
+
+Q2.
+library(data.table)
+
+  
+
+runoff_stations <- readRDS('./data/runoff_stations_raw.rds')
+
+mean(runoff_stations$area)  ###  67069.5   ###
+
+
+ 
+second solotion:
+
+  catchment_list <- c(147680,159300, 144232, 139549, 103488, 98206, 53131, 68827, 50196, 34550, 160800, 35901, 35905, 35897, 34526, 14718, 11887, 3229, 3249, 6119)
+
+  mean(catchment_list)    ###    67069.5  ##
+  
+
+runoff_stations1 <- fread('data/raw/runoff_day/6335020_Q_Day.Cmd.txt')
+  
+runoff_stations2 <- fread('data/raw/runoff_day/6335050_Q_Day.Cmd.txt')
+  
+runoff_stations3 <- fread('data/raw/runoff_day/6335060_Q_Day.Cmd.txt')
+  
+runoff_stations4 <- fread('data/raw/runoff_day/6335070_Q_Day.Cmd.txt')
+  
+runoff_stations5 <- fread('data/raw/runoff_day/6335100_Q_Day.Cmd.txt')
+ 
+ runoff_stations6 <- fread('data/raw/runoff_day/6335150_Q_Day.Cmd.txt')
+  
+runoff_stations7 <- fread('data/raw/runoff_day/6335170_Q_Day.Cmd.txt')
+  
+runoff_stations8 <- fread('data/raw/runoff_day/6335180_Q_Day.Cmd.txt')
+  
+runoff_stations9 <- fread('data/raw/runoff_day/6335200_Q_Day.Cmd.txt')
+  
+runoff_stations10 <- fread('data/raw/runoff_day/6335400_Q_Day.Cmd.txt')
+ 
+ runoff_stations11<- fread('data/raw/runoff_day/6435060_Q_Day.Cmd.txt')
+  
+runoff_stations12<- fread('data/raw/runoff_day/6935050_Q_Day.Cmd.txt')
+  
+runoff_stations13<- fread('data/raw/runoff_day/6935051_Q_Day.Cmd.txt')
+  
+runoff_stations14<- fread('data/raw/runoff_day/6935052_Q_Day.Cmd.txt')
+  
+runoff_stations15<- fread('data/raw/runoff_day/6935053_Q_Day.Cmd.txt')
+  
+runoff_stations16<- fread('data/raw/runoff_day/6935054_Q_Day.Cmd.txt')
+  
+runoff_stations17<- fread('data/raw/runoff_day/6935055_Q_Day.Cmd.txt')
+  
+runoff_stations18<- fread('data/raw/runoff_day/6935145_Q_Day.Cmd.txt')
+  
+runoff_stations19<- fread('data/raw/runoff_day/6935146_Q_Day.Cmd.txt')
+  
+runoff_stations20 <- fread('data/raw/runoff_day/6935500_Q_Day.Cmd.txt')
+  
+  
+  
+mean_runoff1=mean(runoff_stations1$Value)
+  mean_runoff2=mean(runoff_stations2$Value)
+  
+mean_runoff3=mean(runoff_stations3$Value)
+  mean_runoff4=mean(runoff_stations4$Value)
+  
+mean_runoff5=mean(runoff_stations5$Value)
+  mean_runoff6=mean(runoff_stations6$Value)
+  
+mean_runoff7=mean(runoff_stations7$Value)
+  mean_runoff8=mean(runoff_stations8$Value)
+  
+mean_runoff9=mean(runoff_stations9$Value)
+  mean_runoff10=mean(runoff_stations10$Value)
+
+  mean_runoff11=mean(runoff_stations11$Value)
+  mean_runoff12=mean(runoff_stations12$Value)
+
+  mean_runoff13=mean(runoff_stations13$Value)
+  mean_runoff14=mean(runoff_stations14$Value)
+
+  mean_runoff15=mean(runoff_stations15$Value)
+  mean_runoff16=mean(runoff_stations16$Value)
+
+  mean_runoff17=mean(runoff_stations17$Value)
+  mean_runoff18=mean(runoff_stations18$Value)
+
+ mean_runoff19=mean(runoff_stations19$Value)
+  mean_runoff20=mean(runoff_stations20$Value)
+
+mean_runoff <- c(mean_runoff1,mean_runoff2,mean_runoff3,mean_runoff4,mean_runoff5,mean_runoff6,mean_runoff7,mean_runoff8,mean_runoff9,mean_runoff10,mean_runoff11,mean_runoff12,mean_runoff13,mean_runoff14,mean_runoff15,mean_runoff16,mean_runoff17,mean_runoff18,mean_runoff19,mean_runoff20)
+
+  mean(mean_runoff)
+
+  ## is about  1205.197  ##
+
+
+Q3. 
+all values found in Q2. 
+I plotted them as follow :
+
+ plot (mean_runoff)
+
+
+points(1205, pch=20)    ##  this value is total average runoff which is presented as a solid dot in plot   ##
+
+
+Q4.  
+Yes, The lower the altitude, the larger the area catchment. 
+It is logical. water goes downward, and step by step, by further going down, the area of the carchment basin is getting larger as more narrower branches attach together.
