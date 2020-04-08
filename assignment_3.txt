@@ -1,0 +1,80 @@
+Explorer's Questions
+
+Q1.
+Median and 50% quantile are same.
+
+Q2. 
+as it is mentioned and can be seen, the runoff value data is not symetric and it is skewed to left. 
+In fact, the distribution is not normal. 
+it is good to mention that outliers simply shift mean, but median is more resistant statistic.
+
+
+Q3.
+I did not find something strange. 
+ther are some points that I thaught about:
+ -  their elevations is very low - less than 10m - . which is not very strange because they are nearer to sea.
+ -  the distance of LOBI station from the river itself.
+ -  the REES is the first one in order in data, but  LOBI is the 11th. so I don't know what this order means.
+
+Q4.
+According to boxplots:
+ANDE:  highest year:  2002             highest season:    Winter              highest month:  February
+               lowest year:   2003             lowest season:    Summer            lowest month:  October
+
+BASR:  highest year: 1999             highest season:    Summer              highest month:  June
+               lowest year:   2003             lowest season:    Winter            lowest month:  February
+
+DIER:  highest year:   1999             highest season:    Summer             highest month:  June
+               lowest year:   2006             lowest season:    Winter            lowest month:  January
+
+DOMA:  highest year:  1999             highest season:    Summer              highest month:  June
+               lowest year:   2006             lowest season:     Winter           lowest month:  January
+
+DUES:  highest year:  1981             highest season:    Winter              highest month:  February
+               lowest year:   1996             lowest season:    Summer            lowest month:  October
+
+KAUB:  highest year:  2002             highest season:    Winter              highest month:  February
+               lowest year:   2003             lowest season:    Autumn            lowest month:  October
+
+KOEL:  highest year:   2002            highest season:    Winter              highest month:  February
+               lowest year:   1992            lowest season:    Autumn            lowest month:  October
+
+LOBI:     highest year:    1981             highest season:    Winter              highest month:  February
+               lowest year:   1991             lowest season:    Summer            lowest month:  October
+
+MAIN:    highest year:  1999             highest season:    Spring              highest month:  February
+               lowest year:   2003             lowest season:     Autumn            lowest month:  November
+
+MAXA:  highest year:  2002             highest season:    Summer              highest month:  June
+               lowest year:   2003             lowest season:    Winter            lowest month:  November
+
+NEUF:  highest year:  1999            highest season:    Summer              highest month:  July
+               lowest year:   2003             lowest season:    Winter            lowest month:  February
+
+REES:  highest year:  2002             highest season:    Winter             highest month:  March
+               lowest year:   1991             lowest season:     Autumn           lowest month:  October
+
+REKI:  highest year:    1999             highest season:    Summer              highest month:  July
+               lowest year:   2003             lowest season:    Winter            lowest month:  February
+
+RHEI:   highest year:   1999             highest season:    Summer              highest month:  June
+               lowest year:   2003             lowest season:    Winter            lowest month:  December
+	
+RHEM:  highest year:  1999            highest season:    Summer              highest month:  June
+               lowest year:   2003             lowest season:    Winter            lowest month:  January
+
+SPEY:  highest year:  1999             highest season:    Summer              highest month:  June
+               lowest year:   2003             lowest season:    Winter            lowest month:  Novembe
+
+WORM:  highest year:  1999            highest season:    Summer              highest month:  June
+               lowest year:   2003             lowest season:    Winter            lowest month:  Novembe
+
+
+Q5.
+I find the distance between 16 station(in row) using a web service which gave me distance regarding lat and long.
+then I found the average of these 15 distance. 
+it is about 51.70 km.
+
+the shortest distance is between BASEL and RHEINFELDEN
+and the largest one is between  MAXAU and BASEL
+
