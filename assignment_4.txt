@@ -1,0 +1,39 @@
+Navigator's Task
+
+Q1. 
+   R code attached   (assignment_4_1.R)
+
+Q2. 
+  R  code attached (assignment_4_2.R
+
+Q3.  
+R code attached (assignment_4_3.R)+ PDF file of the result plots (assignment_4_Nav3.pdf)
+as we can see in the plots, the slope of Summer runoff in these three station (absolute value), decreases very slightly by reoving last 6 years records.
+this change in slope here  is somehow neglectable in linear regression. also loess regration is almost unchanged.
+but in winter runoff, the change in loess regretion is obvious, in the plots of the data until 2000. but the changes in 2016plots are very little. 
+
+
+Explorer's Questions
+Q1.
+DOMA is not a representative station, because in both plots of runoff/year  (Summer and Winter) it is not the mode and modest one. 
+It's change is the sharpest one in both periods.
+This behaviour may be a reason of the elevation of this station.  DOMA is the hisghest station (which is the one that is located above 600 m).
+it seems that because of the height, the runoff measured in this station corresponds to precipitation. but there may be some other branches may connect this river (and even some spring waters may pour in this river)
+somwhere lower, which can be measured in lower stations.
+
+Q2.
+according to assignment_4_exp2.R and its result in png file, linear and loess regretion are shown. which Loess regretion almost lies on linear one and it is a flat line 
+(somehow around mean (2.5) .
+so the precipitation seems has no change in this area.
+
+Q3. 
+So far, Runoff and precipitation are discussed. there are some other factors that I mention in Q4 more. 
+it seems we are getting closer to the result that are proposed in research hypothesis. 
+
+Q4. 
+There is another factor I think that is important and affects runoff, and it is evapotranspiration.
+one other thing:
+we plotted average annual runoff in three stations (before 2000 and after 2000). 
+if we do it for all stations, it would be more clear that total average runoff is getting higher, or lower. 
+
+
