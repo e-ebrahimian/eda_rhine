@@ -1,0 +1,108 @@
+---
+title: "EDA_FinalProject"
+author: "Ehsan Ebrahimian"
+date: "6/15/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## PART 1
+###  Finding Number of Rivers per Country
+###  Finding Number of Stations per Country
+###  Finding Number of Stations per River
+
+
+_Loading needed Libraries and Files:_
+
+```{r}
+library(data.table)
+library(mapview)
+library(plyr)
+library(sf)
+library(ggplot2)
+runoff_eu_day <- readRDS('data/runoff_eu_day.rds')
+runoff_eu_info <- readRDS('data/runoff_eu_info.rds')
+
+```
+
+
+
+_Numbe of Countries in Record_
+
+```{r}
+stations_country <- as.data.frame(table(runoff_eu_info[, .(Station), by = Country]))
+length(unique(stations_country[,"Country"])) 
+```
+
+_Number of Stations per Country_
+  
+```{r}
+stations_per_country <- ddply(stations_country, "Country", numcolwise(sum))
+stations_per_country
+sum(stations_per_country[,2])
+```
+
+_Distribution of Stations on Map_
+```{r}  
+map_of_stations <- st_as_sf(runoff_eu_info,coords = c('Lon', 'Lat'),crs = 4200)
+mapview(map_of_stations, map.types = 'Stamen.Watercolor')
+```
+ 
+ As it can be seen on the map, Many stations are in Central Europe, and Northern Europe. There is a lack of data of rivers in Southern Europe. 
+Germany has the largest number of stations with 78 stations (DE),and Finland, Norway, Czechia and Sweden have more than 20 stations each.
+
+_Number of Rivers per Country_
+```{r}
+rivers_per_country <- runoff_eu_info[, list(River, Country)]
+rivers_per_country <- rivers_per_country[!duplicated(rivers_per_country$River)]
+rivers_per_country <- rivers_per_country[, .N, by = Country]
+rivers_per_country
+```
+
+
+_And, This is Total number of rivers:_
+```{r}
+sum(rivers_per_country[,2])
+```
+
+
+_Number of stations per River_
+```{r}
+stations_per_river <- runoff_eu_info[, list(Station, River)]
+stations_per_river <- stations_per_river[, .N, by = River]
+stations_per_river
+sum(stations_per_river[,2])
+
+```
+ DANUBE  -  RHINE   -  KOKEMAENJOKI  - ELBE  - WESSER  (rivers with highest numbers of stations)
+   
+   _Distribution of Stations according to Height (Alt)_
+```{r}
+distribution <- runoff_eu_info[, list(Station, Lat, Lon, Alt)]
+
+
+year <- runoff_eu_info[, list(Station, N.Years)]
+year
+ggplot(data = distribution, aes(x = Lat, y = Lon, size = Alt)) +
+  geom_point()
+ 
+```
+
+_Time Distribution of Records_
+```{r}
+ggplot(data = year, aes(x = 1:208, y = N.Years)) +
+  geom_line(colour='red') +
+  geom_point(colour='purple') +
+  geom_smooth(method = "lm")
+
+mean(year$N.Years)
+```
+
+
+ Averagely there are 101 years of data for each station.
+
+[Next Page ->](https://rpubs.com/e_ebrahimian/eda_fp_2)
+
+

@@ -1,0 +1,59 @@
+---
+title: "EDA_FP_Prepration"
+author: "Ehsan Ebrahimian"
+date: "6/15/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+_As following Comparission and Analysis should be done for the data after 1980, records are modified and prepared by the following codes._
+_I used Rstudio Cloud, and The runoff_eu_day had more than 6 million records._
+_So I had to split it, remove records before 1980, and merge it again_
+
+```{r}
+library(data.table)
+library(plyr)
+runoff_eu_day <- readRDS('data/runoff_eu_day.rds')
+## runoff_eu_info <- readRDS('data/runoff_eu_info.rds')
+## runoff_eu_year <- readRDS('data/runoff_eu_year.rds')
+##  runoff_eu_day
+
+runoff_eu_day1 <- runoff_eu_day[1:2000000,]
+runoff_eu_day2 <- runoff_eu_day[2000001:4000000,]
+runoff_eu_day3 <- runoff_eu_day[4000001:6000000,]
+runoff_eu_day4 <- runoff_eu_day[6000001:8000000,]
+```
+
+
+```{r}
+runoff_eu_day1$year <- format(as.Date(runoff_eu_day1$date), "%Y")
+runoff_eu_day2$year <- format(as.Date(runoff_eu_day2$date), "%Y")
+runoff_eu_day3$year <- format(as.Date(runoff_eu_day3$date), "%Y")
+runoff_eu_day4$year <- format(as.Date(runoff_eu_day4$date), "%Y")
+```
+
+
+```{r}
+runoff_eu_day1 <- runoff_eu_day1 [year >= 1980]
+runoff_eu_day2 <- runoff_eu_day2 [year >= 1980]
+runoff_eu_day3 <- runoff_eu_day3 [year >= 1980]
+runoff_eu_day4 <- runoff_eu_day4 [year >= 1980]
+
+##  runoff_eu_day1
+##  runoff_eu_day2
+##  runoff_eu_day3
+##  runoff_eu_day4
+```
+
+
+```{r}
+runoff_eu_day_from_1980 <-rbind(runoff_eu_day1,runoff_eu_day2,runoff_eu_day3,runoff_eu_day4)
+runoff_eu_day_from_1980[order(as.Date(runoff_eu_day_from_1980$date, format="%Y")),]
+
+## saveRDS(runoff_eu_day_from_1980, 'data/runoff_eu_days_from_1980.rds')
+
+```
+
